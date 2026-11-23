@@ -46,9 +46,9 @@
         header h1 {
             margin: 0;
             font-family: var(--font-heading);
-            font-size: 26px;
+            font-size: 35px;
             font-weight: 600;
-            color: var(--text-color);
+            color: #B56576;
         }
         nav a {
             margin: 0 15px;
@@ -70,6 +70,36 @@
             padding: 120px 20px;
             text-align: center;
         }
+		
+		/* Container for the hero images */
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    margin-top: 30px; /* Space below the hero text */
+    flex-wrap: wrap; /* Allows images to stack on smaller screens */
+    width: 100%;
+}
+
+/* The frame around each image */
+.hero-image-frame {
+    flex: 1; /* Allows the frames to share the available space equally */
+    min-width: 250px; /* Prevents them from getting too small on mobile */
+    max-width: 350px; /* Caps the maximum width */
+    height: 400px; /* Sets a fixed height for a uniform look */
+    border-radius: 8px; /* Optional: adds rounded corners for elegance */
+    overflow: hidden; /* Crucial: hides any part of the image that overflows this frame */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Optional: adds a soft shadow */
+}
+
+/* The image itself inside the frame */
+.hero-image-frame img {
+    width: 100%; /* Forces image to take up full width of the frame */
+    height: 100%; /* Forces image to take up full height of the frame */
+    object-fit: cover; /* Crucial: scales the image to fill the frame without stretching it, cropping if necessary */
+    display: block; /* Removes tiny space below inline images */
+}
+		
         .hero h2 {
             font-family: var(--font-heading);
             font-size: 48px;
@@ -210,31 +240,27 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2 class="section-title">My Work</h2>
-        <div class="portfolio-grid">
-            <!-- Later, you will replace these divs with <img src="your-image.jpg"> tags -->
-            <div class="portfolio-item">
-			   <script src="https://elfsightcdn.com/platform.js" async></script>
-			   <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
-			 </div>
-			  <div class="portfolio-item">
-			   <script src="https://elfsightcdn.com/platform.js" async></script>
-			   <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
-			 </div>
-			  <div class="portfolio-item">
-			   <script src="https://elfsightcdn.com/platform.js" async></script>
-			   <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
-			 </div>
-            
-        </div>
-    </section>
-
     <!-- Booking Section (Calendly Widget) -->
     <!-- Recent Work (3 Photos) -->
     <section id="recent-work" style="background-color: var(--bg-color);">
-        <h2 class="section-title">Latest Glam</h2>
+	
+	<!-- Hero Banner Area -->
+    <div class="hero">
+	<h2 class="section-title">Latest Glam</h2>
+        <!-- New Image Container -->
+        <div class="hero-image-container">
+            <div class="hero-image-frame">
+                <img src="1.jpg" alt="Glam makeup example 1">
+            </div>
+            <div class="hero-image-frame">
+                <img src="2.jpg" alt="Glam makeup example 2">
+            </div>
+            <div class="hero-image-frame">
+                <img src="3.jpg" alt="Glam makeup example 3">
+            </div>
+        </div>
+    </div>
+        
         <p style="margin-bottom: 30px;">My most recent work fresh from Instagram.</p>
         
         <!-- Instagram Widget Container for 3 Posts -->
