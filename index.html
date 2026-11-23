@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glam up By Dhara</title>
+    
+    <!-- Importing elegant fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - You can easily change these color codes to match your exact brand colors */
+        :root {
+            --bg-color: #FDFBF7; /* Soft off-white/cream background */
+            --text-color: #2C2A29; /* Soft black for readability */
+            --accent-color: #C19A6B; /* Camel/Gold accent */
+            --accent-hover: #A68255; /* Slightly darker accent for hover states */
+            --card-bg: #FFFFFF; /* Pure white for service cards */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+		
+
+        /* Base Styling */
+        body {
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        
+        /* Navigation Code */
+        header {
+            background-color: var(--bg-color);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #EAE0D5;
+        }
+        header h1 {
+            margin: 0;
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease; /* Smooth hover transition */
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section Code - The large top banner */
+        .hero {
+            /* We use a placeholder color here. You can add a background-image URL later */
+            background-color: #EAE0D5; 
+            padding: 120px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+        .btn {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+            border-radius: 4px; /* Slight rounding for a modern look */
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* General Section Formatting */
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        /* Portfolio Grid Code */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .portfolio-item {
+            height: 350px;
+            background-color: #F0E6DD;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Services & Coaching Cards Code */
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 50px 30px;
+            width: 350px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Soft, elegant shadow */
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Gentle lift effect on hover */
+        }
+        .card h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        /* Footer Code */
+        footer {
+            background-color: var(--text-color);
+            color: #FDFBF7;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Area -->
+    <header>
+        <h1>Glam up By Dhara</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#services">Services</a>
+            <a href="#booking">Book</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Area -->
+    <div class="hero">
+        <h2>Effortless Elegance</h2>
+        <p>Professional makeup artistry, hair styling, draping, and customized 1:1 coaching tailored just for you.</p>
+        <a href="#booking" class="btn">Book an Appointment</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Meet Dhara</h2>
+        <p style="max-width: 700px; margin: 0 auto;">Welcome to Glam up By Dhara. I specialize in professional makeup artistry, hair styling, and intricate draping. Whether you are preparing for a special event or looking to learn the craft through personalized coaching, my goal is to highlight your natural beauty.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Specialty Services</h2>
+        <div class="service-cards">
+            <!-- Service Card 1 -->
+            <div class="card">
+                <h3>Make Up & Styling</h3>
+                <p>Flawless makeup application, intricate hair styling, and professional draping for weddings, photoshoots, and special events.</p>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="card">
+                <h3>1:1 Coaching</h3>
+                <p>Master your everyday look or learn advanced professional techniques with dedicated, hands-on makeup coaching sessions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="section-title">My Work</h2>
+        <div class="portfolio-grid">
+            <!-- Later, you will replace these divs with <img src="your-image.jpg"> tags -->
+            <div class="portfolio-item">
+			   <script src="https://elfsightcdn.com/platform.js" async></script>
+			   <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
+			 </div>
+			  <div class="portfolio-item">
+			   <script src="https://elfsightcdn.com/platform.js" async></script>
+			   <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
+			 </div>
+			  <div class="portfolio-item">
+			   <script src="https://elfsightcdn.com/platform.js" async></script>
+			   <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
+			 </div>
+            
+        </div>
+    </section>
+
+    <!-- Booking Section (Calendly Widget) -->
+    <!-- Recent Work (3 Photos) -->
+    <section id="recent-work" style="background-color: var(--bg-color);">
+        <h2 class="section-title">Latest Glam</h2>
+        <p style="margin-bottom: 30px;">My most recent work fresh from Instagram.</p>
+        
+        <!-- Instagram Widget Container for 3 Posts -->
+        <!-- NOTE: You will replace the div and script below with the embed code for your 3-post grid -->
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
+        
+        <div style="margin-top: 30px;">
+            <a href="#portfolio" class="btn" style="background-color: var(--text-color);">View Full Portfolio</a>
+        </div>
+    </section>
+
+    <!-- Services Section remains here in your code -->
+
+    <!-- Full Portfolio (10 Photos) -->
+    <section id="portfolio">
+        <h2 class="section-title">Full Portfolio</h2>
+        <p style="margin-bottom: 30px;">A deeper look into my styling and makeup artistry.</p>
+        
+        <!-- Instagram Widget Container for 10 Posts -->
+        <!-- NOTE: You will replace the div and script below with the embed code for your 10-post grid -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-9ec59120-0bfc-45e9-9f10-a9fef5b6e4e7" data-elfsight-app-lazy></div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer>
+        <p>&copy; 2026 Glam up By Dhara. All rights reserved.</p>
+        <p>
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Email Me</a>
+        </p>
+    </footer>
+
+</body>
+</html>
