@@ -1,0 +1,226 @@
+        /* CSS Variables - You can easily change these color codes to match your exact brand colors */
+        :root {
+            --bg-color: #FDFBF7; /* Soft off-white/cream background */
+            --text-color: #2C2A29; /* Soft black for readability */
+            --accent-color: #C19A6B; /* Camel/Gold accent */
+            --accent-hover: #A68255; /* Slightly darker accent for hover states */
+            --card-bg: #FFFFFF; /* Pure white for service cards */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+		
+
+        /* Base Styling */
+        body {
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        
+        /* Navigation Code */
+        header {
+            background-color: var(--bg-color);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #EAE0D5;
+			
+            /* Adds a 75% opaque cream tint over the image so text stays readable */
+			background-image: linear-gradient(rgba(253, 251, 247, 0.75), rgba(253, 251, 247, 0.75)), url('9668032.jpg');
+			background-size: cover;       /* Scales the image to fill the entire header without stretching */
+			background-position: center;  /* Centers the image inside the header */
+			background-repeat: no-repeat; /* Prevents the image from tiling */
+    
+			padding: 20px 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			border-bottom: 1px solid #EAE0D5;
+        }
+			
+        header h1 {
+            margin: 0;
+            font-family: 'Alex Brush', cursive !important;
+            font-size: 55px;
+            font-weight: 400;
+            color: #B56576;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 14px;
+			font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease; /* Smooth hover transition */
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section Code - The large top banner */
+        .hero {
+            /* We use a placeholder color here. You can add a background-image URL later */
+            background-color: #EAE0D5; 
+            padding: 120px 20px;
+            text-align: center;
+        }
+		
+		/* Container for the hero images */
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    margin-top: 30px; /* Space below the hero text */
+    flex-wrap: wrap; /* Allows images to stack on smaller screens */
+    width: 100%;
+}
+
+/* The frame around each image */
+.hero-image-frame {
+    flex: 1; /* Allows the frames to share the available space equally */
+    min-width: 250px; /* Prevents them from getting too small on mobile */
+    max-width: 350px; /* Caps the maximum width */
+    height: 400px; /* Sets a fixed height for a uniform look */
+    border-radius: 8px; /* Optional: adds rounded corners for elegance */
+    overflow: hidden; /* Crucial: hides any part of the image that overflows this frame */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Optional: adds a soft shadow */
+}
+
+/* The image itself inside the frame */
+.hero-image-frame img {
+    width: 100%; /* Forces image to take up full width of the frame */
+    height: 100%; /* Forces image to take up full height of the frame */
+    object-fit: cover; /* Crucial: scales the image to fill the frame without stretching it, cropping if necessary */
+    display: block; /* Removes tiny space below inline images */
+}
+		
+        .hero h2 {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+        .btn {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 13px;
+			font-weight: bold;
+            letter-spacing: 2px;
+            border-radius: 4px; /* Slight rounding for a modern look */
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* General Section Formatting */
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 45px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+		
+		/* Makes every paragraph inside any <section> larger and easier to read */
+		section p {
+			font-size: 18px;      /* Standard body text is 16px; increase to 20px or 22px if you want it bigger */
+			line-height: 1.8;     /* Adds comfortable vertical spacing between lines */
+			max-width: 800px;     /* Keeps long paragraphs from stretching too wide across large screens */
+			margin: 0 auto 20px auto; /* Centers the paragraph block and adds space below it */
+}
+		
+        /* Portfolio Grid Code */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .portfolio-item {
+            height: 350px;
+            background-color: #F0E6DD;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Services & Coaching Cards Code */
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 50px 30px;
+            width: 350px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Soft, elegant shadow */
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Gentle lift effect on hover */
+        }
+        .card h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        /* Footer Code */
+        footer {
+            background-color: var(--text-color);
+            color: #FDFBF7;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 10px;
+        } 
+		
+		/* Initial hidden state before scrolling into view */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px); /* Starts 40px lower than its final position */
+    transition: opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Final visible state triggered by JavaScript */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* Glides smoothly to its natural spot */
+}
